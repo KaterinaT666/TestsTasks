@@ -12,10 +12,8 @@ public class UserTests {
 	public void addUserParametres(){
 		User user = new User("Katerina666", "katerina@.ru");
 		assertNotNull(user.getLogin(),user.getEmail());
-		String testLogin = user.getLogin();
-		String testEmail = user.getEmail();
-		assertEquals(testLogin, "Katerina666");
-		assertEquals(testEmail, "katerina@.ru");
+		assertEquals(user.getLogin(), "Katerina666");
+		assertEquals(user.getEmail(), "katerina@.ru");
 	}
 	@Test
 	public void addNullUserParametres(){
