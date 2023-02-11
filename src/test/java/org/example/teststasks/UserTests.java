@@ -7,11 +7,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class UserTests {
 
+
 	@Test
 	public void addUserParametres(){
 		User user = new User("Katerina666", "katerina@.ru");
 		assertNotNull(user.getLogin(),user.getEmail());
-		assertEquals(user.getLogin(), user.getEmail());
+		String testLogin = user.getLogin();
+		String testEmail = user.getEmail();
+		assertEquals(testLogin, "Katerina666");
+		assertEquals(testEmail, "katerina@.ru");
 	}
 	@Test
 	public void addNullUserParametres(){
